@@ -1,0 +1,77 @@
+<!doctype html>
+<html ⚡>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="description" content="This is the AMP Boilerplate.">
+    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <!-- Import other AMP Extensions here -->
+        
+    <style amp-custom>
+    body{
+        background-color: black;
+        color:white;
+    }
+    h1{
+        text-align: center;
+        font-size:50px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        animation: pulse 5s infinite;
+    }
+    @keyframes pulse {
+  20% {
+    color: red;
+  }
+  30%{
+      color:blue; 
+  }
+  40%{
+      color:green;
+  }
+  100% {
+    color: yellow;
+  }
+}
+#demo{
+    color:white;
+    font-size: 40px;
+    font-family:cursive;
+}
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="canonical" href=".">
+    <title>DSC NSEC diaries!</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <h1><i>DSC NSEC BLOGS</i></h1>
+
+    
+  </head>
+  <body>
+    <amp-img
+  src="download.png"
+  width="200px"
+  height="200px"
+  style="float:left"
+>
+</amp-img><p id="demo"></p>
+
+<script>
+var i = 0;
+var txt = '(a short intro of the initiative)Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at varius justo. Pellentesque eu augue feugiat, facilisis est eu, varius mauris. Phasellus viverra enim nec sodales pellentesque. Cras mattis lacus eros, a mollis augue ultricies a. Nunc metu';
+var speed = 50;
+typeWriter();
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+  </body>
+</html>
